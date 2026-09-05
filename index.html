@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pankaj Sharma | Chemistry Researcher & Applied Nanochemist</title>
+  
+  <!-- SEO & Academic Metadata -->
+  <meta name="description" content="Academic & research portfolio of Pankaj Sharma - Chemistry Researcher, Applied Nanochemist, and Computational Vibe Coder at IIT Ropar. Specializing in Carbon Quantum Dots (CQDs), environmental water monitoring, and AI-assisted scientific software.">
+  <meta name="keywords" content="Pankaj Sharma, Chemistry Researcher, Nanochemistry, Carbon Quantum Dots, IIT Ropar, Environmental Monitoring, Spectrocali, CHEMLAB-PRO, SmartLIMS, Analytical Chemistry">
+  <meta name="author" content="Pankaj Sharma">
+  <meta property="og:title" content="Pankaj Sharma | Chemistry Researcher & Applied Nanochemist">
+  <meta property="og:description" content="Explore research in CQDs, environmental water analytics, and AI-assisted scientific software development.">
+  <meta property="og:type" content="website">
+
+  <!-- Scientific Favicon (Inline SVG Flask) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚗️</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR (Smooth Navigation & Quick Actions)
+       ======================================================================== -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-icon"><img src="profile.jpg" alt="Pankaj Sharma" class="nav-avatar-img"></span>
+          <span class="brand-text">Pankaj<span class="gradient-text">.Sharma</span></span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#github-projects" class="nav-link">GitHub</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="resume.pdf" id="nav-cv-btn" class="btn btn-primary btn-sm" download="Pankaj_Sharma_Resume.pdf" title="Download Curriculum Vitae (PDF)">
+            <span>📄</span> <span class="nav-cv-text">Download CV</span>
+          </a>
+          <button class="nav-add-btn" id="open-achievement-modal-btn" title="Add a new achievement or publication">
+            <span>➕</span> Add Entry
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle theme mode">
+            <span id="theme-icon">☀️</span>
+          </button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HOME / HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <canvas id="molecular-canvas"></canvas>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-badge">
+              <span class="pulse-dot"></span>
+              <span id="hero-status-pill">Project Associate @ IIT Ropar &bull; Open to Research Collaborations</span>
+            </div>
+
+            <h1 class="hero-name">
+              Hi, I'm <span class="gradient-text" id="hero-name-display">Pankaj Sharma</span>
+            </h1>
+
+            <div class="hero-titles">
+              <span id="typing-text">Research Chemist</span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="hero-tagline" id="hero-tagline-display">
+              Bridging the gap between molecular chemistry, environmental monitoring, and AI-assisted scientific computing.
+            </p>
+
+            <p class="hero-summary" id="hero-summary-display">
+              Specializing in interdisciplinary research spanning materials science, environmental analytics, nanotechnology, and rapid prototyping of scientific research software.
+            </p>
+
+            <div class="hero-actions">
+              <a href="resume.pdf" id="download-resume-btn" class="btn btn-primary" download="Pankaj_Sharma_Resume.pdf">
+                <span>📄 Download CV (PDF)</span>
+              </a>
+              <a href="#research" class="btn btn-secondary">
+                <span>🔬 Research Interests</span>
+              </a>
+              <a href="#publications" class="btn btn-secondary">
+                <span>📚 Publications</span>
+              </a>
+              <a href="https://github.com/punitsharma16042003" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>🐙 GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/punitsharma16042003" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>💼 LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Academic Quick Metrics -->
+            <div class="hero-stats-grid" id="hero-stats-grid">
+              <!-- Dynamically populated from portfolio-data.js -->
+            </div>
+          </div>
+
+          <!-- Hero Profile Image Visual Card -->
+          <div class="hero-visual">
+            <div class="hero-avatar-card">
+              <div class="hero-avatar-glow"></div>
+              <div class="hero-avatar-inner">
+                <img src="profile.jpg" alt="Pankaj Sharma - Chemistry Researcher" id="hero-profile-image" class="hero-profile-img">
+              </div>
+              <div class="floating-research-pill floating-pill-top">
+                <span class="pill-icon">⚗️</span>
+                <div class="pill-text">
+                  <div class="pill-title">IIT Ropar</div>
+                  <div class="pill-sub">Project Associate</div>
+                </div>
+              </div>
+              <div class="floating-research-pill floating-pill-bottom">
+                <span class="pill-icon">🔬</span>
+                <div class="pill-text">
+                  <div class="pill-title">CQDs Nanomaterials</div>
+                  <div class="pill-sub">Applied Research</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. ABOUT SECTION
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">🧪 Academic Profile</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Scientific background, research philosophy, and the interdisciplinary synthesis of chemistry and computation.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-column">
+            <p class="about-lead" id="about-lead"></p>
+            <div id="about-paragraphs" class="about-paragraphs"></div>
+            
+            <div class="about-affiliations">
+              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">
+                🏛️ Key Affiliations & Academic Venues
+              </h4>
+              <ul class="affiliation-list">
+                <li><strong>Indian Institute of Technology (IIT), Ropar</strong> &mdash; Project Associate (Excise Audits & CQDs Nanotech)</li>
+                <li><strong>Punjab Pollution Control Board (PPCB)</strong> &mdash; Satluj River Water Quality Monitoring</li>
+                <li><strong>Dr. Bhimrao Ambedkar University</strong> &mdash; M.Sc. Chemistry & M.Sc. Zoology</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-pillars-column" id="about-pillars">
+            <!-- Dynamically populated research pillars from portfolio-data.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. RESEARCH INTERESTS SECTION
+         ====================================================================== -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">🔬 Core Inquiries</div>
+          <h2 class="section-title">Research Interests</h2>
+          <p class="section-subtitle">
+            Pioneering eco-friendly nanomaterials, water quality restoration, industrial audits, and AI-accelerated laboratory automation.
+          </p>
+        </div>
+
+        <div class="research-grid" id="research-grid">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. EXPERIMENTAL & LABORATORY PROJECTS
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">⚗️ Applied Science</div>
+          <h2 class="section-title">Laboratory & Applied Research Projects</h2>
+          <p class="section-subtitle">
+            Experimental investigations conducted at IIT Ropar, governmental monitoring bodies, and industrial manufacturing plants.
+          </p>
+        </div>
+
+        <div class="lab-projects-grid" id="projects-grid">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. GITHUB & COMPUTATIONAL PROJECTS (VIBE CODING)
+         ====================================================================== -->
+    <section class="section" id="github-projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">💻 Vibe Coding & AI Tools</div>
+          <h2 class="section-title">GitHub Software & Computational Tools</h2>
+          <p class="section-subtitle">
+            AI-assisted programming applications engineered to streamline chemical inventories, spectroscopic calibration, and LIMS workflows.
+          </p>
+        </div>
+
+        <div class="github-header-bar">
+          <div>
+            <span style="font-size: 0.95rem; color: var(--text-secondary);">
+              Explore open-source scientific tools developed by Pankaj Sharma:
+            </span>
+          </div>
+          <a href="https://github.com/punitsharma16042003" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            <span>🐙 View GitHub @punitsharma16042003</span>
+          </a>
+        </div>
+
+        <div class="github-projects-grid" id="github-projects-grid">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. PUBLICATIONS & PREPRINTS (ACADEMIC PAPERS)
+         ====================================================================== -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">📚 Research Output</div>
+          <h2 class="section-title">Publications & Preprints</h2>
+          <p class="section-subtitle">
+            Manuscripts in preparation, institutional technical reports, and scientific conference presentations.
+          </p>
+        </div>
+
+        <div class="publications-list" id="publications-list">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. RESEARCH & PROFESSIONAL EXPERIENCE TIMELINE
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">💼 Career History</div>
+          <h2 class="section-title">Research & Academic Experience</h2>
+          <p class="section-subtitle">
+            Timeline of research appointments at IIT Ropar, statutory environmental audits, and chemistry education leadership.
+          </p>
+        </div>
+
+        <div class="timeline" id="experience-timeline">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. TECHNICAL & RESEARCH SKILLS MATRIX
+         ====================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">⚡ Scientific Mastery</div>
+          <h2 class="section-title">Skills & Instrumentation Matrix</h2>
+          <p class="section-subtitle">
+            Characterization instruments, analytical testing parameters, computational vibe-coding tools, and scientific software suites.
+          </p>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. CERTIFICATIONS & SPECIALIZED TRAINING
+         ====================================================================== -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">🏆 Credentials</div>
+          <h2 class="section-title">Certifications & Specialized Training</h2>
+          <p class="section-subtitle">
+            Hands-on instrumentation operator certifications from top IITs, atmospheric remote sensing, and university coursework.
+          </p>
+        </div>
+
+        <div class="achievements-actions-bar">
+          <div class="achievements-filters" id="certificate-filters">
+            <button class="filter-btn active" data-filter="all">All Credentials</button>
+            <button class="filter-btn" data-filter="Instrumentation Training">Instrumentation Training</button>
+            <button class="filter-btn" data-filter="Research Training">Research Training</button>
+            <button class="filter-btn" data-filter="Atmospheric Science">Atmospheric Science</button>
+            <button class="filter-btn" data-filter="Academic">Academic</button>
+            <button class="filter-btn" data-filter="Organic Synthesis">Organic Synthesis</button>
+          </div>
+          
+          <button class="btn btn-secondary btn-sm" id="open-achievement-modal-btn-2">
+            <span>➕ Add New Credential</span>
+          </button>
+        </div>
+
+        <div class="achievements-grid" id="certificates-grid">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. CONTACT & ACADEMIC INQUIRIES
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">📬 Inquiries & Collaborations</div>
+          <h2 class="section-title">Contact & Academic Connections</h2>
+          <p class="section-subtitle">
+            Open for interdisciplinary scientific collaborations, doctoral inquiries, industrial environmental audits, and software discussions.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-cards-grid" id="contact-cards-grid">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+          <div class="contact-cta-box">
+            <h3 class="contact-cta-title">Send a Direct Academic Inquiry</h3>
+            <p class="contact-cta-desc">
+              Whether you want to discuss Carbon Quantum Dots synthesis, Satluj River data, or deploy CHEMLAB-PRO in your lab, feel free to reach out.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <a href="mailto:punitsharma16042003@gmail.com?subject=Research%20Collaboration%20Inquiry" class="btn btn-primary" id="direct-email-btn">
+                <span>✉️ Send Email Directly</span>
+              </a>
+              <a href="https://linkedin.com/in/punitsharma16042003" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>💼 Connect on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/punitsharma16042003" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/punitsharma16042003" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="mailto:punitsharma16042003@gmail.com" class="footer-link">Email</a>
+        <a href="#" id="open-edit-guide-link" class="footer-link">✏️ How to Edit Content</a>
+      </div>
+      <p>&copy; <span id="current-year">2026</span> Pankaj Sharma &bull; Chemistry Researcher & Applied Nanochemist</p>
+      <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">
+        Built with Semantic HTML5, Modern CSS3 & Vanilla JS &bull; 100% Ready for GitHub Pages &bull; Edit <code>portfolio-data.js</code> to update
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL: "ADD ACHIEVEMENT / PUBLICATION / ENTRY" CODE GENERATOR
+       ======================================================================== -->
+  <div class="modal-backdrop" id="achievement-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Add New Entry or Achievement</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">
+            Quickly generate clean JavaScript code to paste into <code>portfolio-data.js</code> or preview live on the page!
+          </p>
+        </div>
+        <button class="modal-close-btn" id="close-achievement-modal-btn">&times;</button>
+      </div>
+
+      <form id="achievement-form">
+        <div class="form-group">
+          <label class="form-label" for="entry-type-select">Select Section to Add *</label>
+          <select id="entry-type-select" class="form-select">
+            <option value="certificates">Certificate / Training (certificates)</option>
+            <option value="publications">Publication / Preprint (publications)</option>
+            <option value="githubProjects">GitHub / Vibe Coding Project (githubProjects)</option>
+            <option value="projects">Lab Research Project (projects)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ach-input-title">Title *</label>
+          <input type="text" id="ach-input-title" class="form-input" placeholder="e.g. Best Research Presentation / Green CQD Paper" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="ach-input-org">Institution / Journal / Body *</label>
+            <input type="text" id="ach-input-org" class="form-input" placeholder="e.g. IIT Ropar / Journal of Hazardous Materials" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ach-input-date">Year / Date *</label>
+            <input type="text" id="ach-input-date" class="form-input" placeholder="e.g. 2026" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="ach-input-category">Category / Field *</label>
+            <input type="text" id="ach-input-category" class="form-input" placeholder="e.g. Nanotechnology / Environmental Analysis" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ach-input-badge">Badge Label</label>
+            <input type="text" id="ach-input-badge" class="form-input" placeholder="e.g. Published / Certified / Award">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ach-input-desc">Description / Abstract *</label>
+          <textarea id="ach-input-desc" class="form-textarea" rows="3" placeholder="Brief summary of significance, methodologies, or findings..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ach-input-link">External Link / DOI (Optional)</label>
+          <input type="url" id="ach-input-link" class="form-input" placeholder="https://doi.org/... or https://github.com/...">
+        </div>
+
+        <div class="form-group" style="margin-top: 1.5rem;">
+          <label class="form-label">Generated Code to Paste into <code>portfolio-data.js</code>:</label>
+          <div class="code-snippet-box" id="generated-code-snippet">// Fill form fields above to generate code...</div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" id="preview-achievement-btn">
+            <span>👁️ Live Preview on Page</span>
+          </button>
+          <button type="button" class="btn btn-primary" id="copy-code-btn">
+            <span>📋 Copy Code Snippet</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts: Data Source -> Rendering Engine -> Interactivity -->
+  <script src="portfolio-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/interactions.js"></script>
+</body>
+</html>

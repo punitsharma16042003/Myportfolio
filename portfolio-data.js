@@ -512,7 +512,73 @@ const PORTFOLIO_DATA = {
   ],
 
   // ----------------------------------------------------------------------------
-  // 10. EDUCATION
+  // 10. RESEARCH MEMORIES GALLERY (AUTOMATIC GITHUB INTEGRATION)
+  // ----------------------------------------------------------------------------
+  // 📸 HOW THIS WORKS:
+  // 1. Any photo (.jpg, .png, .webp, .svg) you upload into the 'gallery/' folder
+  //    in GitHub will AUTOMATICALLY appear on your website Gallery tab!
+  // 2. If you want custom titles, dates, or detailed captions for specific photos,
+  //    you can also define or customize them below.
+  // ----------------------------------------------------------------------------
+  gallery: [
+    {
+      id: "mem-cqd-uv",
+      image: "gallery/cqd-fluorescence-uv.svg",
+      title: "Carbon Quantum Dots Under 365nm UV Light",
+      caption: "Observation of vibrant photoluminescence from nitrogen and sulfur co-doped Carbon Quantum Dots (CQDs) in quartz cuvettes synthesized via hydrothermal microwave heating.",
+      category: "Wet Lab",
+      date: "October 2024",
+      location: "IIT Ropar Nanomaterials Lab"
+    },
+    {
+      id: "mem-satluj-field",
+      image: "gallery/satluj-river-water-sampling.svg",
+      title: "Satluj River Fieldwork & Geo-Tagged Water Sampling",
+      caption: "Field expedition along the Satluj River basin measuring in-situ dissolved oxygen (DO), pH, electrical conductivity, and collecting water grab samples for heavy metal profiling.",
+      category: "Fieldwork",
+      date: "March 2024",
+      location: "Satluj River Basin, Punjab"
+    },
+    {
+      id: "mem-icp-ms",
+      image: "gallery/icp-ms-spectroscopy-run.svg",
+      title: "Heavy Metal Trace Profiling via ICP-MS",
+      caption: "Characterization run on Inductively Coupled Plasma Mass Spectrometer (ICP-MS) quantifying sub-parts-per-billion (ppb) concentrations of Pb, Cd, and As.",
+      category: "Instrumentation",
+      date: "July 2024",
+      location: "Central Research Facility, IIT Ropar"
+    },
+    {
+      id: "mem-hydrothermal",
+      image: "gallery/hydrothermal-autoclave-synthesis.svg",
+      title: "Teflon-Lined Hydrothermal Autoclave Setup",
+      caption: "High-pressure, sealed-vessel hydrothermal carbonization synthesis of nanostructured carbon precursors in a digital temperature-controlled oven at 180°C.",
+      category: "Wet Lab",
+      date: "December 2023",
+      location: "Chemical Synthesis Lab, IIT Ropar"
+    },
+    {
+      id: "mem-distillery-audit",
+      image: "gallery/distillery-effluent-audit.svg",
+      title: "Industrial Wastewater & Effluent Treatment Audit",
+      caption: "On-site industrial environmental compliance audit monitoring effluent treatment plant (ETP) aeration basins and conducting COD/BOD reduction validations.",
+      category: "Fieldwork",
+      date: "November 2023",
+      location: "Punjab Industrial Corridor"
+    },
+    {
+      id: "mem-symposium",
+      image: "gallery/national-symposium-presentation.svg",
+      title: "National Chemistry Research Symposium Presentation",
+      caption: "Academic poster presentation detailing novel solar-assisted photocatalytic degradation of persistent organic water contaminants utilizing CQD nanocomposites.",
+      category: "Conferences",
+      date: "January 2024",
+      location: "National Academic Symposium"
+    }
+  ],
+
+  // ----------------------------------------------------------------------------
+  // 11. EDUCATION
   // ----------------------------------------------------------------------------
   education: [
     {

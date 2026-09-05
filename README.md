@@ -122,6 +122,31 @@ Locate `skills: {` (around line 300) and simply add a new string to the matching
     ],
 ```
 
+#### G. To Add Photos to Your Research Memories Gallery
+You have two great ways to add photos:
+
+**Method 1: Direct GitHub Upload (Zero Coding!)**
+1. Navigate to your GitHub repository:
+   👉 **[https://github.com/punitsharma16042003/Myportfolio/tree/main/gallery](https://github.com/punitsharma16042003/Myportfolio/tree/main/gallery)**
+2. Click **"Add file"** > **"Upload files"**.
+3. Drag and drop your research, lab, or fieldwork photos (JPG, PNG, WebP, SVG).
+4. Click the green **"Commit changes"** button.
+5. *Result:* Your website automatically detects the new photos and displays them with interactive lightbox viewing!
+
+**Method 2: Custom Captions & Filters via `portfolio-data.js`**
+If you want to specify a custom caption, date, or category (`Wet Lab`, `Fieldwork`, `Instrumentation`, `Conferences`), locate `gallery: [` (around line 520) and paste:
+```javascript
+    {
+      id: "mem-new",
+      image: "gallery/your-uploaded-photo.jpg",
+      title: "Title of the Research Memory",
+      caption: "Detailed description of the chemical synthesis, water sampling, or conference presentation.",
+      category: "Wet Lab", // Or "Fieldwork", "Instrumentation", "Conferences"
+      date: "November 2024",
+      location: "IIT Ropar Nanomaterials Lab"
+    },
+```
+
 ---
 
 ### 🔴 2. HOW TO REMOVE AN ENTRY
@@ -189,11 +214,20 @@ Myportfolio/
 ├── portfolio-data.js     # MASTER DATA FILE (Edit this to update content)
 ├── profile.jpg           # Clean framed profile picture
 ├── resume.pdf            # Downloadable CV PDF
+├── gallery/              # 📸 RESEARCH MEMORIES (Drop photos here to auto-display!)
+│   ├── cqd-fluorescence-uv.svg
+│   ├── satluj-river-water-sampling.svg
+│   ├── icp-ms-spectroscopy-run.svg
+│   ├── hydrothermal-autoclave-synthesis.svg
+│   ├── distillery-effluent-audit.svg
+│   ├── national-symposium-presentation.svg
+│   └── README.md
 ├── css/
-│   ├── style.css         # Academic styling, typography, responsive layouts
+│   ├── style.css         # Academic styling, typography, gallery & lightbox
 │   └── theme.css         # Academic light theme design tokens
 ├── js/
-│   ├── app.js            # Dynamic DOM renderer populating all 10 sections
-│   └── interactions.js   # Molecular particle canvas, typewriter effect, scroll spy
+│   ├── app.js            # Dynamic DOM renderer & GitHub API auto-sync
+│   └── interactions.js   # Molecular particle canvas, typewriter, lightbox
+├── Portfolio_Instruction_Manual.docx # Formatted Word Manual for offline use
 └── README.md             # Master Protocol & Documentation
 ```

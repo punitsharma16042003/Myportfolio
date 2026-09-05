@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgLab" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09141a" />
+      <stop offset="50%" stop-color="#0f232d" />
+      <stop offset="100%" stop-color="#060c10" />
+    </linearGradient>
+    <linearGradient id="uvBeam" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.85" />
+      <stop offset="40%" stop-color="#6366f1" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="1" />
+      <stop offset="35%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#059669" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="40%" stop-color="#0284c7" stop-opacity="0.75" />
+      <stop offset="80%" stop-color="#0369a1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#075985" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="1" />
+      <stop offset="45%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#d97706" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="15%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="85%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35" />
+    </linearGradient>
+    <pattern id="labGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgLab)" />
+  <rect width="800" height="600" fill="url(#labGrid)" />
+  <polygon points="0,480 800,480 800,600 0,600" fill="#0b1319" />
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#059669" stroke-width="2" stroke-opacity="0.6" />
+  
+  <g transform="translate(260, 40)">
+    <rect x="0" y="0" width="280" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2" />
+    <rect x="20" y="24" width="240" height="12" rx="3" fill="#8b5cf6" filter="url(#softGlow)" />
+    <polygon points="20,36 260,36 440,480 -160,480" fill="url(#uvBeam)" opacity="0.35" />
+    <text x="140" y="21" font-family="'JetBrains Mono', monospace" font-size="11" fill="#c4b5fd" font-weight="600" text-anchor="middle" letter-spacing="1.5">UV-365 nm EXCITATION SOURCE</text>
+  </g>
+
+  <g transform="translate(180, 260)">
+    <ellipse cx="45" cy="110" rx="75" ry="95" fill="url(#cyanGlow)" filter="url(#softGlow)" />
+    <rect x="15" y="10" width="60" height="180" rx="3" fill="#082f49" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="20" y="45" width="50" height="140" rx="2" fill="#38bdf8" fill-opacity="0.75" />
+    <rect x="15" y="10" width="60" height="180" rx="3" fill="url(#glassReflect)" />
+    <ellipse cx="45" cy="45" rx="25" ry="5" fill="#7dd3fc" />
+    <rect x="18" y="0" width="54" height="12" rx="2" fill="#cbd5e1" />
+    <text x="45" y="215" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7dd3fc" text-anchor="middle" font-weight="500">λem = 445 nm</text>
+    <text x="45" y="232" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Blue CQDs</text>
+  </g>
+
+  <g transform="translate(355, 220)">
+    <ellipse cx="45" cy="130" rx="100" ry="120" fill="url(#greenGlow)" filter="url(#softGlow)" />
+    <rect x="10" y="10" width="70" height="220" rx="4" fill="#022c22" fill-opacity="0.6" stroke="#10b981" stroke-width="2" />
+    <rect x="16" y="50" width="58" height="174" rx="2" fill="#10b981" fill-opacity="0.85" />
+    <rect x="10" y="10" width="70" height="220" rx="4" fill="url(#glassReflect)" />
+    <ellipse cx="45" cy="50" rx="29" ry="6" fill="#6ee7b7" />
+    <rect x="14" y="-2" width="62" height="14" rx="2" fill="#f1f5f9" />
+    <circle cx="35" cy="90" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="55" cy="130" r="2" fill="#ffffff" opacity="0.8" />
+    <circle cx="30" cy="170" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="60" cy="185" r="1.8" fill="#ffffff" opacity="0.8" />
+    <text x="45" y="255" font-family="'JetBrains Mono', monospace" font-size="12" fill="#34d399" text-anchor="middle" font-weight="700">λem = 520 nm (Bright Green)</text>
+    <text x="45" y="274" font-family="sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="600">N,S-Doped CQDs (High QY)</text>
+  </g>
+
+  <g transform="translate(555, 260)">
+    <ellipse cx="45" cy="110" rx="75" ry="95" fill="url(#amberGlow)" filter="url(#softGlow)" />
+    <rect x="15" y="10" width="60" height="180" rx="3" fill="#451a03" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1.5" />
+    <rect x="20" y="45" width="50" height="140" rx="2" fill="#f59e0b" fill-opacity="0.75" />
+    <rect x="15" y="10" width="60" height="180" rx="3" fill="url(#glassReflect)" />
+    <ellipse cx="45" cy="45" rx="25" ry="5" fill="#fde68a" />
+    <rect x="18" y="0" width="54" height="12" rx="2" fill="#cbd5e1" />
+    <text x="45" y="215" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="500">λem = 585 nm</text>
+    <text x="45" y="232" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Surface-Functionalized</text>
+  </g>
+
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="220" height="64" rx="8" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981" font-weight="700">🔬 LAB MEMORY #01</text>
+    <text x="14" y="40" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">IIT Ropar &bull; Nanochem Lab</text>
+    <text x="14" y="55" font-family="sans-serif" font-size="10" fill="#94a3b8">Carbon Quantum Dot Photoluminescence</text>
+  </g>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="probeCable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#skyGrad)" />
+  
+  <!-- Mountains in background -->
+  <polygon points="0,320 180,210 320,290 500,180 680,280 800,220 800,380 0,380" fill="#1e293b" opacity="0.7" />
+  <polygon points="60,340 240,250 400,320 580,240 750,330 800,300 800,420 0,420" fill="#334155" opacity="0.6" />
+
+  <!-- Satluj River Water Stream -->
+  <path d="M 0,380 Q 200,420 400,390 T 800,440 L 800,600 L 0,600 Z" fill="url(#riverGrad)" />
+  <path d="M 0,430 Q 300,400 500,460 T 800,450" fill="none" stroke="#7dd3fc" stroke-width="2" opacity="0.4" />
+  <path d="M 0,480 Q 250,460 550,510 T 800,490" fill="none" stroke="#6ee7b7" stroke-width="1.5" opacity="0.4" />
+
+  <!-- Riverbank Forefront -->
+  <polygon points="0,460 280,480 340,600 0,600" fill="#1e293b" />
+  <polygon points="0,470 260,490 310,600 0,600" fill="#0f172a" />
+
+  <!-- Field Sampling Equipment Station -->
+  <g transform="translate(60, 410)">
+    <!-- Portable Water Quality Multiparameter Meter -->
+    <rect x="0" y="0" width="130" height="150" rx="8" fill="#1e293b" stroke="#059669" stroke-width="2" />
+    <rect x="12" y="14" width="106" height="65" rx="4" fill="#022c22" stroke="#10b981" stroke-width="1" />
+    <text x="22" y="32" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34d399">pH: 7.42</text>
+    <text x="22" y="48" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">DO: 6.8 mg/L</text>
+    <text x="22" y="64" font-family="'JetBrains Mono', monospace" font-size="11" fill="#facc15">EC: 320 μS/cm</text>
+    <circle cx="30" cy="100" r="10" fill="#334155" />
+    <circle cx="65" cy="100" r="10" fill="#334155" />
+    <circle cx="100" cy="100" r="10" fill="#059669" />
+    <text x="65" y="132" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Field Sonde Pro</text>
+
+    <!-- Submerged Probe Cable -->
+    <path d="M 115,110 Q 180,120 220,100 T 320,130" fill="none" stroke="url(#probeCable)" stroke-width="4" />
+    <!-- Submerged Sensor Head with Water Ripples -->
+    <circle cx="320" cy="130" r="14" fill="#10b981" opacity="0.8" />
+    <circle cx="320" cy="130" r="28" fill="none" stroke="#6ee7b7" stroke-width="1.5" opacity="0.6" />
+    <circle cx="320" cy="130" r="44" fill="none" stroke="#6ee7b7" stroke-width="1" opacity="0.3" />
+  </g>
+
+  <!-- Sampling Glassware on Rock -->
+  <g transform="translate(210, 470)">
+    <!-- BOD Bottle 1 -->
+    <rect x="0" y="15" width="28" height="50" rx="3" fill="#38bdf8" fill-opacity="0.5" stroke="#bae6fd" stroke-width="1" />
+    <rect x="6" y="0" width="16" height="15" fill="#f8fafc" />
+    <text x="14" y="44" font-family="'JetBrains Mono', monospace" font-size="8" fill="#ffffff" text-anchor="middle">ST-1</text>
+    <!-- BOD Bottle 2 -->
+    <rect x="36" y="20" width="28" height="45" rx="3" fill="#34d399" fill-opacity="0.5" stroke="#a7f3d0" stroke-width="1" />
+    <rect x="42" y="7" width="16" height="13" fill="#f8fafc" />
+    <text x="50" y="48" font-family="'JetBrains Mono', monospace" font-size="8" fill="#ffffff" text-anchor="middle">ST-2</text>
+  </g>
+
+  <!-- Field GPS & Info Watermark -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8" font-weight="700">🌊 FIELDWORK MEMORY #02</text>
+    <text x="14" y="42" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Satluj River Basin, Punjab</text>
+    <text x="14" y="58" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">GPS: 30.9753° N, 76.5273° E</text>
+  </g>
+</svg>

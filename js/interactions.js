@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initMobileMenu();
   initFilters();
+  initGalleryInteractions();
   initScrollSpy();
 });
 
@@ -209,7 +210,136 @@ function initFilters() {
 }
 
 /* ----------------------------------------------------------------------------
- * 6. SCROLL SPY FOR NAVIGATION
+ * 6. RESEARCH MEMORIES GALLERY FILTERS & LIGHTBOX
+ * ---------------------------------------------------------------------------- */
+let currentLightboxIndex = 0;
+
+function initGalleryInteractions() {
+  // Category Filter clicks
+  const filterContainer = document.getElementById('gallery-filters');
+  if (filterContainer) {
+    filterContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('filter-btn')) {
+        filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        const filter = e.target.getAttribute('data-filter');
+        window.activeGalleryFilter = filter;
+        if (typeof displayGalleryCards === 'function' && window.allGalleryItems) {
+          displayGalleryCards(window.allGalleryItems, filter);
+        }
+      }
+    });
+  }
+
+  // Lightbox UI buttons
+  const closeBtn = document.getElementById('lightbox-close-btn');
+  const overlay = document.getElementById('lightbox-overlay');
+  const nextBtn = document.getElementById('lightbox-next-btn');
+  const prevBtn = document.getElementById('lightbox-prev-btn');
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (overlay) overlay.addEventListener('click', closeLightbox);
+  if (nextBtn) nextBtn.addEventListener('click', nextLightbox);
+  if (prevBtn) prevBtn.addEventListener('click', prevLightbox);
+
+  // Keyboard navigation for Lightbox
+  window.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('gallery-lightbox');
+    if (lightbox && lightbox.classList.contains('active')) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        nextLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        prevLightbox();
+      }
+    }
+  });
+}
+
+function openLightbox(index) {
+  const items = window.filteredGalleryItems || window.allGalleryItems || [];
+  if (!items || items.length === 0 || index < 0 || index >= items.length) return;
+
+  currentLightboxIndex = index;
+  updateLightboxContent();
+
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (lightbox) {
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (lightbox) {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
+function updateLightboxContent() {
+  const items = window.filteredGalleryItems || window.allGalleryItems || [];
+  if (!items || items.length === 0) return;
+
+  const item = items[currentLightboxIndex];
+  if (!item) return;
+
+  const img = document.getElementById('lightbox-image');
+  const title = document.getElementById('lightbox-title');
+  const caption = document.getElementById('lightbox-caption');
+  const category = document.getElementById('lightbox-category');
+  const date = document.getElementById('lightbox-date');
+  const location = document.getElementById('lightbox-location');
+
+  if (img) {
+    img.src = item.image;
+    img.alt = item.title;
+  }
+  if (title) title.textContent = item.title;
+  if (caption) caption.textContent = item.caption || '';
+  if (category) category.textContent = item.category || 'Research Memory';
+  
+  if (date) {
+    const dateVal = date.querySelector('.meta-val');
+    if (dateVal) {
+      dateVal.textContent = item.date || 'Lab Memory';
+      date.style.display = item.date ? 'inline-flex' : 'none';
+    }
+  }
+
+  if (location) {
+    const locVal = location.querySelector('.meta-val');
+    if (locVal) {
+      locVal.textContent = item.location || 'IIT Ropar';
+      location.style.display = item.location ? 'inline-flex' : 'none';
+    }
+  }
+}
+
+function nextLightbox() {
+  const items = window.filteredGalleryItems || window.allGalleryItems || [];
+  if (!items || items.length === 0) return;
+  currentLightboxIndex = (currentLightboxIndex + 1) % items.length;
+  updateLightboxContent();
+}
+
+function prevLightbox() {
+  const items = window.filteredGalleryItems || window.allGalleryItems || [];
+  if (!items || items.length === 0) return;
+  currentLightboxIndex = (currentLightboxIndex - 1 + items.length) % items.length;
+  updateLightboxContent();
+}
+
+// Expose globally for app.js card click events
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+
+/* ----------------------------------------------------------------------------
+ * 7. SCROLL SPY FOR NAVIGATION
  * ---------------------------------------------------------------------------- */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');

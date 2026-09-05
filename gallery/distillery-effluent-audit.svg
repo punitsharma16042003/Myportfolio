@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyInd" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="effluent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#skyInd)" />
+
+  <!-- Industrial Plant Silhouettes -->
+  <rect x="80" y="160" width="140" height="300" fill="#1e293b" stroke="#334155" stroke-width="2" />
+  <rect x="250" y="220" width="100" height="240" fill="#334155" />
+  <rect x="380" y="120" width="30" height="340" fill="#1e293b" />
+  <polygon points="360,120 395,80 430,120" fill="#334155" />
+
+  <!-- Aeration Clarifier Basin -->
+  <ellipse cx="580" cy="380" rx="160" ry="80" fill="#1e293b" stroke="#475569" stroke-width="4" />
+  <ellipse cx="580" cy="385" rx="145" ry="70" fill="url(#effluent)" opacity="0.8" />
+  <!-- Aeration Bubbles -->
+  <circle cx="540" cy="380" r="6" fill="#fde68a" opacity="0.6" />
+  <circle cx="580" cy="360" r="10" fill="#fde68a" opacity="0.7" />
+  <circle cx="620" cy="390" r="8" fill="#fde68a" opacity="0.5" />
+
+  <!-- Foreground Inspection Checklist & Titration Burette -->
+  <g transform="translate(60, 360)">
+    <!-- Audit Clipboard -->
+    <rect x="0" y="0" width="200" height="200" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" />
+    <rect x="60" y="-12" width="80" height="24" rx="4" fill="#475569" />
+    <text x="16" y="32" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0f172a" font-weight="700">AUDIT CHECKLIST &bull; ETP</text>
+    <text x="16" y="60" font-family="sans-serif" font-size="11" fill="#059669" font-weight="600">✓ Influent COD: 48,000 mg/L</text>
+    <text x="16" y="86" font-family="sans-serif" font-size="11" fill="#059669" font-weight="600">✓ Effluent COD: 180 mg/L</text>
+    <text x="16" y="112" font-family="sans-serif" font-size="11" fill="#059669" font-weight="600">✓ TDS Compliance: PASS</text>
+    <text x="16" y="138" font-family="sans-serif" font-size="11" fill="#059669" font-weight="600">✓ Heavy Metals: Trace Only</text>
+    <text x="16" y="172" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748b">Inspector: P. Sharma</text>
+  </g>
+
+  <!-- Metadata Banner -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="250" height="68" rx="8" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f59e0b" font-weight="700">🏭 ENVIRONMENTAL AUDIT #05</text>
+    <text x="14" y="42" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Distillery Wastewater Treatment</text>
+    <text x="14" y="58" font-family="sans-serif" font-size="10" fill="#94a3b8">Punjab Industrial Environmental Audit</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#hall)" />
+
+  <!-- Conference Poster Stand (Center-Left) -->
+  <g transform="translate(100, 100)">
+    <!-- Stand legs -->
+    <line x1="60" y1="400" x2="60" y2="480" stroke="#64748b" stroke-width="4" />
+    <line x1="360" y1="400" x2="360" y2="480" stroke="#64748b" stroke-width="4" />
+    <line x1="20" y1="480" x2="100" y2="480" stroke="#64748b" stroke-width="4" />
+    <line x1="320" y1="480" x2="400" y2="480" stroke="#64748b" stroke-width="4" />
+
+    <!-- Poster Board -->
+    <rect x="0" y="0" width="420" height="400" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" />
+    <!-- Poster Header Banner -->
+    <rect x="0" y="0" width="420" height="70" rx="6" fill="#059669" />
+    <text x="210" y="30" font-family="sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">SOLAR-DRIVEN CQD PHOTOCATALYTIC WATER PURIFICATION</text>
+    <text x="210" y="52" font-family="sans-serif" font-size="10" fill="#a7f3d0" text-anchor="middle">Pankaj Sharma &bull; Indian Institute of Technology Ropar</text>
+
+    <!-- Poster Body Columns -->
+    <rect x="15" y="85" width="120" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="75" y="105" font-family="sans-serif" font-size="9" fill="#0f172a" font-weight="700" text-anchor="middle">1. CQD Synthesis</text>
+    <circle cx="75" cy="150" r="28" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2" />
+    <text x="75" y="154" font-family="'JetBrains Mono', monospace" font-size="9" fill="#059669" text-anchor="middle">N,S-CQD</text>
+
+    <rect x="150" y="85" width="120" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="210" y="105" font-family="sans-serif" font-size="9" fill="#0f172a" font-weight="700" text-anchor="middle">2. Dye Degradation</text>
+    <line x1="160" y1="200" x2="260" y2="130" stroke="#ef4444" stroke-width="2" />
+    <text x="210" y="170" font-family="sans-serif" font-size="8" fill="#ef4444" text-anchor="middle">98.4% Efficiency</text>
+
+    <rect x="285" y="85" width="120" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="345" y="105" font-family="sans-serif" font-size="9" fill="#0f172a" font-weight="700" text-anchor="middle">3. Real River Run</text>
+    <path d="M 295,170 Q 345,130 395,170" fill="none" stroke="#0284c7" stroke-width="2" />
+    <text x="345" y="195" font-family="sans-serif" font-size="8" fill="#0284c7" text-anchor="middle">Satluj Basin Trials</text>
+
+    <!-- Conclusions Box -->
+    <rect x="15" y="240" width="390" height="140" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+    <text x="28" y="265" font-family="sans-serif" font-size="10" fill="#166534" font-weight="700">KEY SCIENTIFIC CONCLUSIONS</text>
+    <text x="28" y="290" font-family="sans-serif" font-size="9" fill="#14532d">&bull; Rapid 45-min catalytic breakdown of organic toxins under ambient sunlight.</text>
+    <text x="28" y="312" font-family="sans-serif" font-size="9" fill="#14532d">&bull; High stability across 10 repeated photocatalytic cycles without leaching.</text>
+    <text x="28" y="334" font-family="sans-serif" font-size="9" fill="#14532d">&bull; Eco-friendly hydrothermal pathway from abundant precursor feedstocks.</text>
+  </g>
+
+  <!-- Presenter Podium / Badge Silhouette -->
+  <g transform="translate(560, 220)">
+    <rect x="0" y="100" width="140" height="260" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2" />
+    <circle cx="70" cy="40" r="30" fill="#334155" />
+    <rect x="30" y="80" width="80" height="80" rx="6" fill="#1e293b" />
+    <!-- Delegate Badge -->
+    <rect x="50" y="115" width="40" height="30" rx="3" fill="#ffffff" />
+    <text x="70" y="132" font-family="'JetBrains Mono', monospace" font-size="7" fill="#059669" font-weight="700" text-anchor="middle">IIT ROPAR</text>
+  </g>
+
+  <!-- Metadata Card -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="240" height="66" rx="8" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8b5cf6" font-weight="700">🏛️ SYMPOSIUM MEMORY #06</text>
+    <text x="14" y="42" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">National Research Conference</text>
+    <text x="14" y="58" font-family="sans-serif" font-size="10" fill="#94a3b8">Water Purification Poster Presentation</text>
+  </g>
+</svg>

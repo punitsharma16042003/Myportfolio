@@ -6,7 +6,13 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
+  // Ensure theme is always clean academic light mode
+  document.documentElement.removeAttribute('data-theme');
+  try {
+    localStorage.removeItem('ps_research_theme');
+    localStorage.removeItem('ps_portfolio_theme');
+  } catch (e) {}
+
   initMolecularCanvas();
   initTypewriter();
   initMobileMenu();
@@ -14,37 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEntryGeneratorModal();
   initScrollSpy();
 });
-
-/* ----------------------------------------------------------------------------
- * 1. THEME TOGGLE (QUANTUM SLATE DARK / ACADEMIC LIGHT)
- * ---------------------------------------------------------------------------- */
-function initThemeToggle() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  const themeIcon = document.getElementById('theme-icon');
-  const htmlEl = document.documentElement;
-
-  const savedTheme = localStorage.getItem('ps_research_theme') || 'dark';
-  htmlEl.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlEl.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      htmlEl.setAttribute('data-theme', newTheme);
-      localStorage.setItem('ps_research_theme', newTheme);
-      updateThemeIcon(newTheme);
-      showToast(`Switched to ${newTheme === 'dark' ? 'Quantum Slate (Dark)' : 'Academic Paper (Light)'} Mode`);
-    });
-  }
-
-  function updateThemeIcon(theme) {
-    if (themeIcon) {
-      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-  }
-}
 
 /* ----------------------------------------------------------------------------
  * 2. MOLECULAR / ATOM PARTICLE CANVAS (CHEMISTRY THEME)
@@ -112,7 +87,7 @@ function initMolecularCanvas() {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = '#10b981';
+      ctx.fillStyle = '#059669';
       ctx.fill();
     }
   }
@@ -138,7 +113,7 @@ function initMolecularCanvas() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(16, 185, 129, ${0.22 * (1 - dist / maxDistance)})`;
+          ctx.strokeStyle = `rgba(5, 150, 105, ${0.18 * (1 - dist / maxDistance)})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }

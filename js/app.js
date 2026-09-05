@@ -59,6 +59,29 @@ function renderPersonalInfo(info) {
     heroImg.src = info.profileImageUrl;
   }
 
+  // Floating Badges on Profile Photo
+  if (info.heroBadges) {
+    const topBadge = document.querySelector('.floating-pill-top');
+    if (topBadge && info.heroBadges.top) {
+      const iconEl = topBadge.querySelector('.pill-icon');
+      const titleEl = topBadge.querySelector('.pill-title');
+      const subEl = topBadge.querySelector('.pill-sub');
+      if (iconEl && info.heroBadges.top.icon) iconEl.textContent = info.heroBadges.top.icon;
+      if (titleEl && info.heroBadges.top.title) titleEl.textContent = info.heroBadges.top.title;
+      if (subEl && info.heroBadges.top.sub) subEl.textContent = info.heroBadges.top.sub;
+    }
+
+    const bottomBadge = document.querySelector('.floating-pill-bottom');
+    if (bottomBadge && info.heroBadges.bottom) {
+      const iconEl = bottomBadge.querySelector('.pill-icon');
+      const titleEl = bottomBadge.querySelector('.pill-title');
+      const subEl = bottomBadge.querySelector('.pill-sub');
+      if (iconEl && info.heroBadges.bottom.icon) iconEl.textContent = info.heroBadges.bottom.icon;
+      if (titleEl && info.heroBadges.bottom.title) titleEl.textContent = info.heroBadges.bottom.title;
+      if (subEl && info.heroBadges.bottom.sub) subEl.textContent = info.heroBadges.bottom.sub;
+    }
+  }
+
   // Render Stats
   const statsContainer = document.getElementById('hero-stats-grid');
   if (statsContainer && info.stats) {

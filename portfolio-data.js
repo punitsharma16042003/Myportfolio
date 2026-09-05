@@ -49,6 +49,20 @@ const PORTFOLIO_DATA = {
     resumePdfUrl: "resume.pdf",                   // Kept in root folder as resume.pdf
     profileImageUrl: "profile.jpg",               // Profile image in root folder
 
+    // Floating badges beside profile photo
+    heroBadges: {
+      top: {
+        icon: "⚗️",
+        title: "IIT Ropar",
+        sub: "Project Associate"
+      },
+      bottom: {
+        icon: "💻",
+        title: "AI & Vibe Coder",
+        sub: "Scientific Software"
+      }
+    },
+
     summary: "With a strong foundation in chemistry and hands-on research experience, I specialize in interdisciplinary research spanning materials science, environmental monitoring, nanotechnology, and AI-driven computational workflows. My expertise encompasses advanced laboratory experimentation, analytical characterization (ICP-MS, AAS, SEM, XRD), nanomaterial synthesis, and rapid prototyping of scientific research software.",
     
     // Quick Academic & Research Metric Badges

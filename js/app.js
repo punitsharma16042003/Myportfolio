@@ -378,24 +378,7 @@ function renderCertificates(certificates, filter = 'all') {
     </div>
   `).join('');
 
-  // Quick Add Card at the end
-  const quickAddCard = `
-    <div class="quick-add-card" id="quick-add-trigger">
-      <div class="quick-add-icon">➕</div>
-      <h4 class="quick-add-title">Add New Certificate</h4>
-      <p class="quick-add-desc">Earned a new award or credential? Click here to generate code for <code>portfolio-data.js</code>.</p>
-    </div>
-  `;
-
-  container.innerHTML = cardsHtml + quickAddCard;
-
-  const quickAddBtn = document.getElementById('quick-add-trigger');
-  if (quickAddBtn) {
-    quickAddBtn.addEventListener('click', () => {
-      const modal = document.getElementById('achievement-modal');
-      if (modal) modal.classList.add('active');
-    });
-  }
+  container.innerHTML = cardsHtml;
 }
 
 /**

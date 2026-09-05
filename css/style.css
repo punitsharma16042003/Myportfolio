@@ -226,14 +226,14 @@ button, input, select, textarea {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.65rem;
 }
 
 .nav-link {
-  font-size: 0.91rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-secondary);
-  padding: 0.48rem 0.85rem;
+  padding: 0.52rem 0.95rem;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   display: inline-flex;
@@ -471,32 +471,14 @@ button, input, select, textarea {
   max-width: 100%;
 }
 
-.hero-avatar-glow {
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  right: -14px;
-  bottom: -14px;
-  background: var(--accent-gradient);
-  border-radius: var(--radius-lg);
-  filter: blur(28px);
-  opacity: 0.38;
-  z-index: 0;
-  transition: opacity var(--transition-normal);
-}
-
-.hero-avatar-card:hover .hero-avatar-glow {
-  opacity: 0.6;
-}
-
 .hero-avatar-inner {
   position: relative;
   z-index: 1;
   background: var(--bg-card);
-  border: 2px solid var(--accent-primary);
+  border: 1px solid var(--bg-card-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
   aspect-ratio: 4 / 5;
 }
 
@@ -510,7 +492,7 @@ button, input, select, textarea {
 }
 
 .hero-avatar-card:hover .hero-profile-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* Floating Research Badges */
@@ -532,8 +514,8 @@ button, input, select, textarea {
 
 .floating-research-pill:hover {
   transform: translateY(-2px);
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-glow);
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.09);
 }
 
 .floating-pill-top {

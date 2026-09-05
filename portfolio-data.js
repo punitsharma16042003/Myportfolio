@@ -33,7 +33,7 @@ const PORTFOLIO_DATA = {
       "Applied Nanochemist",
       "Environmental & Lab Analyst",
       "Chemistry Educator",
-      "Vibe Coder & AI Tool Builder"
+      "Computational Chemist & Tool Builder"
     ],
     statusPill: "Project Associate @ IIT Ropar • Open to Research Collaborations",
     tagline: "Bridging the gap between molecular chemistry, environmental monitoring, and AI-assisted scientific computing.",
@@ -43,7 +43,6 @@ const PORTFOLIO_DATA = {
     githubUsername: "punitsharma16042003",
     githubUrl: "https://github.com/punitsharma16042003",
     linkedinUrl: "https://linkedin.com/in/punitsharma16042003",
-    googleScholarUrl: "https://scholar.google.com", // Replace with your Google Scholar profile URL
     orcidId: "0000-0002-XXXX-XXXX",               // Replace with your ORCID iD
     orcidUrl: "https://orcid.org",                 // Replace with your ORCID URL
     resumePdfUrl: "resume.pdf",                   // Kept in root folder as resume.pdf
@@ -57,9 +56,9 @@ const PORTFOLIO_DATA = {
         sub: "Project Associate"
       },
       bottom: {
-        icon: "💻",
-        title: "AI & Vibe Coder",
-        sub: "Scientific Software"
+        icon: "🧪",
+        title: "Research Chemist",
+        sub: "Chemical Sciences"
       }
     },
 

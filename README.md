@@ -1,7 +1,7 @@
 # 🔬 Pankaj Sharma - Chemistry Researcher Portfolio Website
 ### Modern Scientific & Academic Portfolio (HTML5, CSS3, Vanilla JS)
 
-A clean, responsive, and academic-themed portfolio tailored for a **Chemistry Researcher, Applied Nanochemist, and Computational Vibe Coder**, hosted on **GitHub Pages**.
+A clean, responsive, and academic-themed portfolio tailored for a **Chemistry Researcher, Applied Nanochemist, and Research Chemist**, hosted on **GitHub Pages**.
 
 🔗 **Live GitHub Repository**: [https://github.com/punitsharma16042003/Myportfolio](https://github.com/punitsharma16042003/Myportfolio)  
 🌐 **Live Website**: [https://punitsharma16042003.github.io/Myportfolio/](https://punitsharma16042003.github.io/Myportfolio/)
@@ -161,7 +161,7 @@ achievements: [
 
 ### ✏️ 3. HOW TO EDIT EXISTING INFORMATION
 - **To update your bio or summary**: Edit `personalInfo.summary` in `portfolio-data.js`.
-- **To update your Google Scholar or ORCID link**: Edit `personalInfo.googleScholarUrl` or `personalInfo.orcidUrl`.
+- **To update your ORCID link**: Edit `personalInfo.orcidUrl`.
 - **To update your profile photo**: Replace `profile.jpg` in the root folder with your new photo (keep the name `profile.jpg`).
 - **To update your resume / CV**: Replace `resume.pdf` in the root folder with your new PDF (keep the name `resume.pdf`).
 

@@ -134,7 +134,7 @@ function initTypewriter() {
 
   const titles = (typeof PORTFOLIO_DATA !== 'undefined' && PORTFOLIO_DATA.personalInfo && PORTFOLIO_DATA.personalInfo.titles) 
     ? PORTFOLIO_DATA.personalInfo.titles 
-    : ['Research Chemist', 'Applied Nanochemist', 'Environmental Analyst', 'Vibe Coder'];
+    : ['Research Chemist', 'Applied Nanochemist', 'Environmental Analyst', 'Computational Chemist'];
 
   let titleIndex = 0;
   let charIndex = 0;

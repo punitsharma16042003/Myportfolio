@@ -446,13 +446,6 @@ function renderContact(info) {
       icon: '💼',
       action: info.linkedinUrl,
       copyable: false
-    },
-    {
-      type: 'Google Scholar',
-      value: 'Pankaj Sharma',
-      icon: '🎓',
-      action: info.googleScholarUrl,
-      copyable: false
     }
   ];
 

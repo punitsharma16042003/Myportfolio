@@ -235,11 +235,11 @@ const PORTFOLIO_DATA = {
       status: "Active"
     },
      {
-      id: "gh-proj-3",
+      id: "gh-proj-6",
       title: "InstaDROP",
       tagline: "Automatic advance bulk images uploader for instagram",
       description: "Automatically upload multiple images to Instagram in bulk with a streamlined, time-saving workflow. Organize, schedule, and publish images effortlessly with minimal manual intervention.",
-      tags: ["JavaScript", "HTML/CSS", "Database", "QA/QC", "LIMS"],
+      tags: ["JavaScript", "HTML/CSS", "Database", "Automation", "Python"],
       githubUrl: "https://github.com/punitsharma16042003",
       stars: "Featured",
       status: "Active"

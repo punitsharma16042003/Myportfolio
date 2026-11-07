@@ -254,6 +254,26 @@ const PORTFOLIO_DATA = {
       stars: "Open Source",
       status: "Active"
     },
+     {
+      id: "gh-proj-7",
+      title: "AcademiaRadar",
+      tagline: "AcademiaRadar is a Academic PhD position and research position finder",
+      description: "AcademiaRadar is an intelligent academic opportunity finder that discovers PhD positions, research vacancies, postdoctoral fellowships, and funded research opportunities worldwide. Stay updated with relevant academic openings and accelerate your research career.",
+      tags: ["Python", "Jobfind", "Data Crawler", "Search Tools"],
+      githubUrl: "https://github.com/punitsharma16042003",
+      stars: "Open Source",
+      status: "Active"
+    },
+    {
+      id: "gh-proj-8",
+      title: "ExamForge",
+      tagline: "ExamForger it is a Academic and scholing exam paper builder",
+      description: "ExamForger is an intelligent academic exam paper generator designed for schools, colleges, and educators. Create customized question papers with structured sections, difficulty levels, subject-specific questions, and flexible exam patterns.",
+      tags: ["Python", "HTML", "CSS", "Academic tool", "JS"],
+      githubUrl: "https://github.com/punitsharma16042003",
+      stars: "Open Source",
+      status: "Active"
+    },
     {
       id: "gh-proj-5",
       title: "DOI-EXTRACTER",
